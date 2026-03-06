@@ -1,28 +1,28 @@
 import { LLM } from "@/types"
 
-const GROQ_PLATORM_LINK = "https://groq.com/"
+const GROQ_PLATFORM_LINK = "https://groq.com/"
 
-const LLaMA3_8B: LLM = {
-  modelId: "llama3-8b-8192",
-  modelName: "LLaMA3-8b-chat",
+const LLAMA_31_8B: LLM = {
+  modelId: "llama-3.1-8b-instant",
+  modelName: "Llama 3.1 8B Instant",
   provider: "groq",
-  hostedId: "llama3-8b-8192",
-  platformLink: GROQ_PLATORM_LINK,
+  hostedId: "llama-3.1-8b-instant",
+  platformLink: GROQ_PLATFORM_LINK,
   imageInput: false,
   pricing: {
     currency: "USD",
     unit: "1M tokens",
     inputCost: 0.05,
-    outputCost: 0.1
+    outputCost: 0.08
   }
 }
 
-const LLaMA3_70B: LLM = {
-  modelId: "llama3-70b-8192",
-  modelName: "LLaMA3-70b-chat",
+const LLAMA_33_70B: LLM = {
+  modelId: "llama-3.3-70b-versatile",
+  modelName: "Llama 3.3 70B Versatile",
   provider: "groq",
-  hostedId: "llama3-70b-4096",
-  platformLink: GROQ_PLATORM_LINK,
+  hostedId: "llama-3.3-70b-versatile",
+  platformLink: GROQ_PLATFORM_LINK,
   imageInput: false,
   pricing: {
     currency: "USD",
@@ -32,39 +32,39 @@ const LLaMA3_70B: LLM = {
   }
 }
 
-const MIXTRAL_8X7B: LLM = {
-  modelId: "mixtral-8x7b-32768",
-  modelName: "Mixtral-8x7b-Instruct-v0.1",
+const GPT_OSS_20B: LLM = {
+  modelId: "openai/gpt-oss-20b",
+  modelName: "GPT OSS 20B",
   provider: "groq",
-  hostedId: "mixtral-8x7b-32768",
-  platformLink: GROQ_PLATORM_LINK,
+  hostedId: "openai/gpt-oss-20b",
+  platformLink: GROQ_PLATFORM_LINK,
   imageInput: false,
   pricing: {
     currency: "USD",
     unit: "1M tokens",
-    inputCost: 0.27,
-    outputCost: 0.27
+    inputCost: 0.075,
+    outputCost: 0.30
   }
 }
 
-const GEMMA_7B_IT: LLM = {
-  modelId: "gemma-7b-it",
-  modelName: "Gemma-7b-It",
+const QWEN3_32B: LLM = {
+  modelId: "qwen/qwen3-32b",
+  modelName: "Qwen3 32B",
   provider: "groq",
-  hostedId: "gemma-7b-it",
-  platformLink: GROQ_PLATORM_LINK,
+  hostedId: "qwen/qwen3-32b",
+  platformLink: GROQ_PLATFORM_LINK,
   imageInput: false,
   pricing: {
     currency: "USD",
     unit: "1M tokens",
-    inputCost: 0.15,
-    outputCost: 0.15
+    inputCost: 0.29,
+    outputCost: 0.59
   }
 }
 
 export const GROQ_LLM_LIST: LLM[] = [
-  LLaMA3_8B,
-  LLaMA3_70B,
-  MIXTRAL_8X7B,
-  GEMMA_7B_IT
+  LLAMA_31_8B,
+  LLAMA_33_70B,
+  GPT_OSS_20B,
+  QWEN3_32B
 ]

@@ -1,9 +1,9 @@
-import { LLM } from "@/types"
+import { LLM, LLMID } from "@/types"
 
 const GROQ_PLATFORM_LINK = "https://groq.com/"
 
 const LLAMA_31_8B: LLM = {
-  modelId: "llama-3.1-8b-instant",
+  modelId: "llama-3.1-8b-instant" as LLMID,
   modelName: "Llama 3.1 8B Instant",
   provider: "groq",
   hostedId: "llama-3.1-8b-instant",
@@ -18,7 +18,7 @@ const LLAMA_31_8B: LLM = {
 }
 
 const LLAMA_33_70B: LLM = {
-  modelId: "llama-3.3-70b-versatile",
+  modelId: "llama-3.3-70b-versatile" as LLMID,
   modelName: "Llama 3.3 70B Versatile",
   provider: "groq",
   hostedId: "llama-3.3-70b-versatile",
@@ -33,7 +33,7 @@ const LLAMA_33_70B: LLM = {
 }
 
 const GPT_OSS_20B: LLM = {
-  modelId: "openai/gpt-oss-20b",
+  modelId: "openai/gpt-oss-20b" as LLMID,
   modelName: "GPT OSS 20B",
   provider: "groq",
   hostedId: "openai/gpt-oss-20b",
@@ -48,7 +48,7 @@ const GPT_OSS_20B: LLM = {
 }
 
 const QWEN3_32B: LLM = {
-  modelId: "qwen/qwen3-32b",
+  modelId: "qwen/qwen3-32b" as LLMID,
   modelName: "Qwen3 32B",
   provider: "groq",
   hostedId: "qwen/qwen3-32b",

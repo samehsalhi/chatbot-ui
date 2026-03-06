@@ -47,7 +47,6 @@ export const CHAT_SETTING_LIMITS: Record<LLMID, ChatSettingLimits> = {
   },
 
   // GOOGLE MODELS
-  
   "gemini-1.5-flash": {
     MIN_TEMPERATURE: 0.0,
     MAX_TEMPERATURE: 1.0,
@@ -100,29 +99,35 @@ export const CHAT_SETTING_LIMITS: Record<LLMID, ChatSettingLimits> = {
   },
 
   // GROQ MODELS
-  "llama3-8b-8192": {
+  "llama-3.1-8b-instant": {
     MIN_TEMPERATURE: 0.0,
     MAX_TEMPERATURE: 1.0,
     MAX_TOKEN_OUTPUT_LENGTH: 8192,
-    MAX_CONTEXT_LENGTH: 8192
+    MAX_CONTEXT_LENGTH: 131072
   },
-  "llama3-70b-8192": {
+  "llama-3.3-70b-versatile": {
     MIN_TEMPERATURE: 0.0,
     MAX_TEMPERATURE: 1.0,
-    MAX_TOKEN_OUTPUT_LENGTH: 8192,
-    MAX_CONTEXT_LENGTH: 8192
+    MAX_TOKEN_OUTPUT_LENGTH: 32768,
+    MAX_CONTEXT_LENGTH: 131072
   },
-  "mixtral-8x7b-32768": {
+  "openai/gpt-oss-20b": {
     MIN_TEMPERATURE: 0.0,
     MAX_TEMPERATURE: 1.0,
-    MAX_TOKEN_OUTPUT_LENGTH: 4096,
-    MAX_CONTEXT_LENGTH: 32768
+    MAX_TOKEN_OUTPUT_LENGTH: 16384,
+    MAX_CONTEXT_LENGTH: 131072
   },
-  "gemma-7b-it": {
+  "openai/gpt-oss-120b": {
     MIN_TEMPERATURE: 0.0,
-    MAX_TEMPERATURE: 2.0,
-    MAX_TOKEN_OUTPUT_LENGTH: 8192,
-    MAX_CONTEXT_LENGTH: 8192
+    MAX_TEMPERATURE: 1.0,
+    MAX_TOKEN_OUTPUT_LENGTH: 16384,
+    MAX_CONTEXT_LENGTH: 131072
+  },
+  "qwen/qwen3-32b": {
+    MIN_TEMPERATURE: 0.0,
+    MAX_TEMPERATURE: 1.0,
+    MAX_TOKEN_OUTPUT_LENGTH: 32768,
+    MAX_CONTEXT_LENGTH: 131072
   },
 
   // OPENAI MODELS
@@ -131,7 +136,6 @@ export const CHAT_SETTING_LIMITS: Record<LLMID, ChatSettingLimits> = {
     MAX_TEMPERATURE: 2.0,
     MAX_TOKEN_OUTPUT_LENGTH: 4096,
     MAX_CONTEXT_LENGTH: 4096
-    // MAX_CONTEXT_LENGTH: 16385 (TODO: Change this back to 16385 when OpenAI bumps the model)
   },
   "gpt-4-turbo-preview": {
     MIN_TEMPERATURE: 0.0,
